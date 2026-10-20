@@ -22,7 +22,7 @@
 
 | N° | Instruction(s) | Votre réponse |
 | :---: | :--- | :--- |
-| **1** | `print(10 / 4);` | <!-- Écrire la réponse ici --> | KSJFKSJFKS
+| **1** | `print(10 / 4);` | KSJFKSJFKS | 
 | **2** | `print(10 ~/ 4);` | <!-- Écrire la réponse ici --> |
 | **3** | `print(10 % 4);` | <!-- Écrire la réponse ici --> |
 | **4** | `print('Dart' + ' ' + 'MST');` | <!-- Écrire la réponse ici --> |
