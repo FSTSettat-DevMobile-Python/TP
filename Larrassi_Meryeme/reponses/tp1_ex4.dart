@@ -1,5 +1,3 @@
-// TP4 - Calculatrice à deux opérandes
-// Lit deux nombres et un opérateur, puis affiche le résultat avec un switch.
 import 'dart:io';
 
 void main() {

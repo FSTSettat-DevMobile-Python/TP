@@ -1,8 +1,6 @@
-// TP3 - Moyenne et mention
-// Lit un nom et deux notes au clavier, calcule la moyenne et affiche la mention.
 import 'dart:io';
 String mention(double m) {
- if (m >= 16) {
+  if (m >= 16) {
     return 'Très bien';
   } else if (m >= 14) {
     return 'Bien';

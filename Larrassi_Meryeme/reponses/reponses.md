@@ -119,3 +119,4 @@ if (age >= 18) {
 ```dart
 String statut = (age >= 18) ? 'majeur' : 'mineur';
 ```
+
