@@ -22,16 +22,16 @@
 
 | N° | Instruction(s) | Votre réponse |
 | :---: | :--- | :--- |
-| **1** | `print(10 / 4);` | KSJFKSJFKS | 
-| **2** | `print(10 ~/ 4);` | <!-- Écrire la réponse ici --> |
-| **3** | `print(10 % 4);` | <!-- Écrire la réponse ici --> |
-| **4** | `print('Dart' + ' ' + 'MST');` | <!-- Écrire la réponse ici --> |
-| **5** | `print('2' + '3');` | <!-- Écrire la réponse ici --> |
-| **6** | `print(2 + 3 * 4 - 1);` | <!-- Écrire la réponse ici --> |
-| **7** | `int x = 5; x += 3; x *= 2; print(x);` | <!-- Écrire la réponse ici --> |
-| **8** | `print(5 > 3 && 2 > 4);` | <!-- Écrire la réponse ici --> |
-| **9** | `print(!(5 == 5) \|\| 3 < 4);` | <!-- Écrire la réponse ici --> |
-| **10**| `String? s; print(s ?? 'vide');` | <!-- Écrire la réponse ici --> |
+| **1** | `print(10 / 4);` | 2.5 | 
+| **2** | `print(10 ~/ 4);` | 2 |
+| **3** | `print(10 % 4);` | 2 |
+| **4** | `print('Dart' + ' ' + 'MST');` | Dart MST |
+| **5** | `print('2' + '3');` | 23 |
+| **6** | `print(2 + 3 * 4 - 1);` | 13 |
+| **7** | `int x = 5; x += 3; x *= 2; print(x);` | 16 |
+| **8** | `print(5 > 3 && 2 > 4);` | false |
+| **9** | `print(!(5 == 5) \|\| 3 < 4);` | true |
+| **10**| `String? s; print(s ?? 'vide');` | vide |
 
 ---
 
@@ -40,10 +40,10 @@
 
 | Valeur / Expression | Votre réponse | Valeur / Expression | Votre réponse |
 | :--- | :--- | :--- | :--- |
-| `42` | <!-- Type --> | `'42'` | <!-- Type --> |
-| `3.14` | <!-- Type --> | `10 / 2` | <!-- Type --> |
-| `true` | <!-- Type --> | `10 ~/ 2` | <!-- Type --> |
-| `"Settat"` | <!-- Type --> | `7 > 3` | <!-- Type --> |
+| `42` | int | `'42'` | String |
+| `3.14` | double | `10 / 2` | double |
+| `true` | bool | `10 ~/ 2` | int |
+| `"Settat"` | String | `7 > 3` | bool |
 
 ---
 
@@ -65,12 +65,12 @@
 
 | Ligne | Type d'erreur | Problème identifié | Correction proposée |
 | :---: | :--- | :--- | :--- |
-| **2** | <!-- Syntaxe/Type/Logique --> | <!-- Explication --> | `int age = 20;` |
-| **3** | <!-- Syntaxe/Type/Logique --> | <!-- Explication --> | <!-- Correction --> |
-| **4** | <!-- Syntaxe/Type/Logique --> | <!-- Explication --> | <!-- Correction --> |
-| **5** | <!-- Syntaxe/Type/Logique --> | <!-- Explication --> | <!-- Correction --> |
-| **6** | <!-- Syntaxe/Type/Logique --> | <!-- Explication --> | <!-- Correction --> |
-| **7** | <!-- Syntaxe/Type/Logique --> | <!-- Explication --> | <!-- Correction --> |
+| **2** | Type | 'vingt' est du texte, pas un entier | `int age = 20;` |
+| **3** | Syntaxe| virgule au lieu du point décimal | `double prix = 12.5;` |
+| **4** | Syntaxe | quotes différentes ' et " | `String nom = 'Sara';` |
+| **5** | Syntaxe | point-virgule manquant | `const tva = 0.2;` |
+| **6** | Logique | on ne peut pas modifier une const | supprimer la ligne `tva = 0.25;` |
+| **7** | Type | on relie un texte et un nombre avec + | `print('Age : ' + age.toString());` |
 
 ---
 
@@ -97,24 +97,24 @@ String mention(double m) {
 
 | Appel | `mention(17)` | `mention(13.99)` | `mention(10)` | `mention(9.5)` |
 | :--- | :---: | :---: | :---: | :---: |
-| **Résultat** | <!-- Rep1 --> | <!-- Rep2 --> | <!-- Rep3 --> | <!-- Rep4 --> |
+| **Résultat** | Très bien | Assez bien | Passable | Insuffisant |
 
 #### b) Expressions booléennes
 *Écrivez en Dart la condition qui vaut `true` lorsque :*
 
 1. `a` est compris entre 10 et 20 (bornes incluses) :
 ```dart
-// Votre réponse ici
+a >= 10 && a <= 20
 ```
 
 2. `n` est un entier **pair et strictement positif** :
 ```dart
-// Votre réponse ici
+n > 0 && n % 2 == 0
 ```
 
 3. `annee` est une année **bissextile** (divisible par 4 mais pas par 100, ou divisible par 400) :
 ```dart
-// Votre réponse ici
+(annee % 4 == 0 && annee % 100 != 0) || (annee % 400 == 0)
 ```
 
 #### c) Réécriture
@@ -131,7 +131,7 @@ if (age >= 18) {
 
 **Votre réécriture :**
 ```dart
-// Votre code ici
+String statut = (age >= 18) ? 'majeur' : 'mineur';
 ```
 
 ---
@@ -147,16 +147,25 @@ if (age >= 18) {
 
 1. **Version installée :**
    ```bash
-   # Collez le résultat de `dart --version` ici
+  Dart SDK version: 3.13.5 (stable) (Tue Sep 29 01:00:52 2026 -0700) on "windows_x64"
    ```
 
 2. **Code de la carte de visite (`tp1_ex1.dart`) :**
 ```dart
-// Collez votre code Dart ici
+// TP1 - Carte de visite
+// Affiche nom, filière et ville avec des variables et l'interpolation de chaînes.
+void main() {
+    String nom= 'Larrassi Meryeme' ;
+    String filiere='Master Sicrat';
+    String ville='Settat';
+    print('Nom : $nom');
+    print('Filiere : $filiere');
+    print('Ville : $ville');
+}
 ```
 
 3. **Remarque sur l'erreur de syntaxe testée :**
-   * <!-- Expliquez ce qu'a affiché le compilateur lors de l'oubli du ';' -->
+   * J’ai enlevé le point-virgule à la fin d’une ligne pour voir. Dart m’a affiché Expected ';' after this. en me donnant la ligne du problème. Le programme n’a pas marché, et dès que j’ai remis le ;, ça a refonctionné.
 
 ---
 
@@ -164,11 +173,21 @@ if (age >= 18) {
 
 - **Code source (`tp1_ex2.dart`) :**
 ```dart
-// Collez votre code Dart ici
+// TP2 - Calcul d'une facture
+// Calcule le prix TTC à partir d'un prix HT et d'une TVA fixée en constante.
+void main() {
+    const double tauxTVA=0.20 ;
+    double prixHT=250;
+    double montantTVA=prixHT*tauxTVA;
+    double prixTTC=prixHT+montantTVA;
+    print('HT : ${prixHT.toStringAsFixed(2)} DH');
+    print('TVA : ${montantTVA.toStringAsFixed(2)} DH');
+    print('TTC : ${prixTTC.toStringAsFixed(2)} DH');
+}
 ```
 
 - **Question :** Pourquoi utiliser `const` plutôt que `var` pour la TVA ?
-  > **Réponse :** <!-- Votre explication ici -->
+  > **Réponse :** On met const parce que la TVA ne change pas. C’est toujours 20%. Avec const, on est sûr que la valeur reste la même et qu’on ne la modifie pas sans faire exprès. Avec var on pourrait la changer, mais ça ne sert à rien ici.
 
 ---
 
@@ -176,7 +195,36 @@ if (age >= 18) {
 
 - **Code source (`tp1_ex3.dart`) :**
 ```dart
-// Collez votre code Dart ici
+// // TP3 - Moyenne et mention
+// Lit un nom et deux notes au clavier, calcule la moyenne et affiche la mention.
+import 'dart:io';
+String mention(double m) {
+ if (m >= 16) {
+    return 'Très bien';
+  } else if (m >= 14) {
+    return 'Bien';
+  } else if (m >= 12) {
+    return 'Assez bien';
+  } else if (m >= 10) {
+    return 'Passable';
+  } else {
+    return 'Insuffisant';
+  }
+}
+void main(){
+    stdout.write('Nom : ');
+     String nom = stdin.readLineSync() ?? '';
+    stdout.write('Note1 : ');
+    double? note1 = double.tryParse(stdin.readLineSync()??'');
+    stdout.write('Note2 : ');
+    double? note2 = double.tryParse(stdin.readLineSync()??'');
+if (note1 == null || note2 == null){
+     print('Erreur : saisie invalide.');
+     return;
+}
+    double moyenne = (note1+note2)/2;
+    print('$nom : ${moyenne.toStringAsFixed(2)} (${mention(moyenne)})');
+    }
 ```
 
 ---
@@ -185,12 +233,67 @@ if (age >= 18) {
 
 - **Code source (`tp1_ex4.dart`) :**
 ```dart
-// Collez votre code Dart ici
+// TP4 - Calculatrice à deux opérandes
+// Lit deux nombres et un opérateur, puis affiche le résultat avec un switch.
+import 'dart:io';
+
+void main() {
+  stdout.write('Premier nombre : ');
+  double? a = double.tryParse(stdin.readLineSync() ?? '');
+  stdout.write('Deuxième nombre : ');
+  double? b = double.tryParse(stdin.readLineSync() ?? '');
+  stdout.write('Opérateur (+, -, *, /) : ');
+  String op = stdin.readLineSync() ?? '';
+
+  if (a == null || b == null) {
+    print('Erreur : nombres invalides.');
+    return;
+  }
+
+  switch (op) {
+    case '+':
+      print('Résultat : ${a + b}');
+      break;
+    case '-':
+      print('Résultat : ${a - b}');
+      break;
+    case '*':
+      print('Résultat : ${a * b}');
+      break;
+    case '/':
+      if (b == 0) {
+        print('Erreur : division par zéro impossible.');
+      } else {
+        print('Résultat : ${a / b}');
+      }
+      break;
+    default:
+      print('Erreur : opérateur inconnu.');
+  }
+}
 ```
 
 - **Bonus : Année bissextile (`tp1_ex4_bonus.dart`) :**
 ```dart
-// Collez votre code Dart ici
+// TP4 Bonus - Année bissextile
+// Lit une année et indique si elle est bissextile.
+import 'dart:io';
+bool estBissextile(int annee) {
+  return (annee % 4 == 0 && annee % 100 != 0) || (annee % 400 == 0);
+}
+void main() {
+  stdout.write('Entrez une année : ');
+  int? annee = int.tryParse(stdin.readLineSync() ?? '');
+  if (annee == null) {
+    print('Erreur : année invalide.');
+    return;
+  }
+  if (estBissextile(annee)) {
+    print('$annee est bissextile.');
+  } else {
+    print("$annee n'est pas bissextile.");
+  }
+}
 ```
 
 ---
@@ -199,12 +302,55 @@ if (age >= 18) {
 
 - **Code source (`tp1_ex5.dart`) :**
 ```dart
-// Collez votre code Dart ici
+// TP5 - Conversion d'une durée
+// Convertit un nombre de secondes en heures, minutes et secondes.
+// Utilise la division entière (~/) et le reste (%).
+import 'dart:io';
+void main() {
+  stdout.write('Nombre de secondes : ');
+  int? total = int.tryParse(stdin.readLineSync() ?? '');
+  if (total == null || total < 0) {
+    print('Erreur : entrez un entier positif.');
+    return;
+  }
+  int heures = total ~/ 3600;
+  int minutes = (total % 3600) ~/ 60;
+  int secondes = total % 60;
+  print('$total s = $heures h $minutes min $secondes s');
+}
 ```
 
 - **Défi (Gestion des pluriels et unités nulles) :**
 ```dart
-// Collez le code du défi ici (optionnel)
+// TP5 Défi - Conversion avec pluriel et sans unités nulles
+// Affiche seulement les unités non nulles et gère le pluriel des heures.
+import 'dart:io';
+void main() {
+  stdout.write('Nombre de secondes : ');
+  int? total = int.tryParse(stdin.readLineSync() ?? '');
+
+  if (total == null || total < 0) {
+    print('Erreur : entrez un entier positif.');
+    return;
+  }
+  int heures = total ~/ 3600;
+  int minutes = (total % 3600) ~/ 60;
+  int secondes = total % 60;
+  List<String> morceaux = [];
+  if (heures > 0) {
+    morceaux.add('$heures ' + (heures > 1 ? 'heures' : 'heure'));
+  }
+  if (minutes > 0) {
+    morceaux.add('$minutes min');
+  }
+  if (secondes > 0) {
+    morceaux.add('$secondes s');
+  }
+  if (morceaux.isEmpty) {
+    morceaux.add('0 s');
+  }
+  print('$total s = ${morceaux.join(' ')}');
+}
 ```
 
 ---
