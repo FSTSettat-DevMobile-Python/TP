@@ -22,16 +22,16 @@
 
 | N° | Instruction(s) | Votre réponse |
 | :---: | :--- | :--- |
-| **1** | `print(10 / 4);` | KSJFKSJFKS | 
-| **2** | `print(10 ~/ 4);` | <!-- Écrire la réponse ici --> |
-| **3** | `print(10 % 4);` | <!-- Écrire la réponse ici --> |
-| **4** | `print('Dart' + ' ' + 'MST');` | <!-- Écrire la réponse ici --> |
-| **5** | `print('2' + '3');` | <!-- Écrire la réponse ici --> |
-| **6** | `print(2 + 3 * 4 - 1);` | <!-- Écrire la réponse ici --> |
-| **7** | `int x = 5; x += 3; x *= 2; print(x);` | <!-- Écrire la réponse ici --> |
-| **8** | `print(5 > 3 && 2 > 4);` | <!-- Écrire la réponse ici --> |
-| **9** | `print(!(5 == 5) \|\| 3 < 4);` | <!-- Écrire la réponse ici --> |
-| **10**| `String? s; print(s ?? 'vide');` | <!-- Écrire la réponse ici --> |
+| **1** | `print(10 / 4);` | 2.5 | 
+| **2** | `print(10 ~/ 4);` | 2 |
+| **3** | `print(10 % 4);` | 2 |
+| **4** | `print('Dart' + ' ' + 'MST');` | Dart MST |
+| **5** | `print('2' + '3');` | 23 |
+| **6** | `print(2 + 3 * 4 - 1);` | 13 |
+| **7** | `int x = 5; x += 3; x *= 2; print(x);` | 16 |
+| **8** | `print(5 > 3 && 2 > 4);` | faux    |
+| **9** | `print(!(5 == 5) \|\| 3 < 4);` | true |
+| **10**| `String? s; print(s ?? 'vide');` | vide |
 
 ---
 
