@@ -382,7 +382,7 @@ git commit -m "Serie 1 : notions prealables asynchrone"
 git push origin main
 ```
 
-> Vérifiez sur github.com que `reponses_serie1.md` s'affiche correctement, puis transmettez le lien du dépôt à l'enseignant.
+> Vérifiez sur github.com que `reponses_serie4.md` s'affiche correctement, puis transmettez le lien du dépôt à l'enseignant.
 
 ---
 
